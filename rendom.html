@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Image Dropdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">
+            <span id="dropdownLabel">Select an Image</span>
+            <i class="arrow"></i>
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#" onclick="selectImage('./pic.jpg', 'Beautiful Landscape')">
+                <img src="image1.jpg" alt="Image 1">Beautiful Landscape
+            </a>
+            <a href="#" onclick="selectImage('./moon.jpg', 'City Lights')">
+                <img src="image2.jpg" alt="Image 2">City Lights
+            </a>
+            <a href="#" onclick="selectImage('image3.jpg', 'Sunset Beach')">
+                <img src="image3.jpg" alt="Image 3">Sunset Beach
+            </a>
+        </div>
+    </div>
+
+    <div id="selectedImageContainer" class="selected-image-container">
+        <p id="selectedImageText">No image selected</p>
+        <img id="selectedImage" src="" alt="" style="display: none;">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
